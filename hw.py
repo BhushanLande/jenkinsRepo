@@ -1,1 +1,1 @@
-print('Hello world using jenkins file with auto triggered')
+print('Hello World using jenkins file with auto triggered')
