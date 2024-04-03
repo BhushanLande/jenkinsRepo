@@ -1,13 +1,17 @@
 pipeline {
  agent any
  stages {
+ stage('build') {
+ steps {
+ echo 'Compiling the java source code'
+ sh 'javac hello.java'
+ }
+ }
  stage('run') {
  steps {
- echo 'Java changes'
- sh 'javac hello.java'
- sh 'hello.java'
+ echo 'Running the compiled java code.'
+ sh 'java hello'
  }
  }
  }
 }
-
