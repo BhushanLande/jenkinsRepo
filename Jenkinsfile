@@ -1,11 +1,14 @@
 pipeline {
  agent any
  stages {
+ stage('build'){
+ echo 'Compiling java code'
+ sh 'javac hello.java'
+ }
  stage('run') {
  steps {
- echo 'I want to switch job in 2 months'
- sh 'python --version'
- sh 'python hw.py'
+ echo 'Running java compiled code'
+ sh 'hello.java'
  }
  }
  }
