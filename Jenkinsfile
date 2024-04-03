@@ -1,8 +1,8 @@
 pipeline {
  agent any
  stages {
- stage('build'){
- steps{
+ stage('build') {
+ steps {
  echo 'Compiling java code'
  sh 'javac hello.java'
  }
